@@ -15,15 +15,15 @@ using namespace std;
 void multiplyMatrix(int n1, int m1, int n2, int m2, long long arr1[SIZE][SIZE], long long arr2[SIZE][SIZE]){
 
     // Your code here
-    if (m1 != n2) {
+    if (m1 != n2) {       // For Checking That both has same i(for 1st matrix ) and j(for Second matrix) are same or not.
         cout<<"-1";
         return;
     }
     else{
         for(int i = 0 ; i< n1 ;i++ ){  // This is For The First Matrix ith Row.
-            for(int j = 0 ; j< m2 ; j++ ){  //This is For Column for First Matrix And also Row For Second Matrix.
+            for(int j = 0 ; j< m2 ; j++ ){  //This is For jth columns For Second Matrix.
                 int temp= 0;
-                for(int k=0;k<m1;k++){ // This is Row-Column wise dot Multiplication.
+                for(int k=0;k<m1;k++){ // This is For The Same Row in Both Matrix that m1(for 1st matrix) and n2(for Second matrix).
                     temp = temp + (arr1[i][k] * arr2[k][j]);
                 }
                 cout<<temp<<" ";
